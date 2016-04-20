@@ -1,0 +1,109 @@
+<div class="table">
+	<form class="tableFormMargin" name="sheetForm" ng-submit="evaluate()" novalidate>
+		<table class="table">
+			<tr>
+				<td>Options:</td>
+				<td><label>
+					income only <input  type="checkbox" ng-model="checkBox" ng-init="checkBox=true"> 
+					<select class="tableForm-options" ng-model="period">
+						<option value="yearly">Yearly</option>
+						<option value="monthly">Monthly</option>
+					</select>
+				</label></td>
+				<td>
+					<ul class="tableForm-ul">
+						<li>
+							$ <input type="radio" ng-model="valueSwitch" name="value-switch" checked>
+						</li>
+						<li>
+							% <input type="radio" ng-model="valueSwitch" name="value-switch" value="%">
+						</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<th>Gross Income (default: 50000)</th>
+				<th><input class="form-control" id="focusedInput" name="gross" ng-model="gross" ng-init="gross=50000"></th>
+				<td>{{sheet.gross}}</td>
+			</tr>
+			<tr>
+				<th>1. Tithe</th>
+				<td><input class="form-control" id="focusedInput" name="tithe" ng-model="incForm.tithe"></td>
+				<td>{{sheet.tithe}}</td>
+			</tr>
+			<tr>
+				<th>2. Taxes</th>
+				<td><input class="form-control" id="focusedInput" name="taxes" ng-model="incForm.taxes"></td>
+				<td>{{sheet.taxes}}</td>
+			</tr>
+			<tr>
+				<th>NET SPENDABLE</th>
+				<td>{{sheet.net}}</td>
+			</tr>
+			<tr>
+				<th>3. Housing</th>
+				<td><input class="form-control" id="focusedInput" name="housing" ng-model="incForm.housing"></td>
+				<td>{{sheet.housing}}</td>
+			</tr>
+			<tr>
+				<th>4. Food</th>
+				<td><input class="form-control" id="focusedInput" name="food" ng-model="incForm.food"></td>
+				<td>{{sheet.food}}</td>
+			</tr>
+			<tr>
+				<th>5. Auto</th>
+				<td><input class="form-control" id="focusedInput" name="auto" ng-model="incForm.auto"></td>
+				<td>{{sheet.auto}}</td>
+			</tr>
+			<tr>
+				<th>6. Insurance</th>
+				<td><input class="form-control" id="focusedInput" name="insurance" ng-model="incForm.insurance"></td>
+				<td>{{sheet.insurance}}</td>
+			</tr>
+			<tr>
+				<th>7. Debts*</th>
+				<td><input class="form-control" id="focusedInput" name="debts" ng-model="incForm.debts"></td>
+				<td>{{sheet.debts}}</td>
+			</tr>
+			<tr>
+				<th>8. Entertainment/Recreation</th>
+				<td><input class="form-control" id="focusedInput" name="entertainment" ng-model="incForm.ent"></td>
+				<td>{{sheet.ent}}</td>
+			</tr>
+			<tr>
+				<th>9. Clothing</th>
+				<td><input class="form-control" id="focusedInput" name="clothing" ng-model="incForm.clothing"></td>
+				<td>{{sheet.clothing}}</td>
+			</tr>
+			<tr>
+				<th>10. Savings</th>
+				<td><input class="form-control" id="focusedInput" name="savings" ng-model="incForm.savings"></td>
+				<td>{{sheet.savings}}</td>
+			</tr>
+			<tr>
+				<th>11. Medical/Dental</th>
+				<td><input class="form-control" id="focusedInput" name="medical" ng-model="incForm.medical"></td>
+				<td>{{sheet.medical}}</td>
+			</tr>
+			<tr>
+				<th>12. Miscellaneous</th>
+				<td><input class="form-control" id="focusedInput" name="misc" ng-model="incForm.misc"></td>
+				<td>{{sheet.misc}}</td>
+			</tr>
+			<tr>
+				<th>13. School/Child care</th>
+				<td><input class="form-control" id="focusedInput" name="school" ng-model="incForm.school"></td>
+				<td>{{sheet.school}}</td>
+			</tr>
+			<tr>
+				<th>14. Investments</th>
+				<td><input class="form-control" id="focusedInput" name="investments" ng-model="incForm.investments"></td>
+				<td>{{sheet.investments}}</td>
+			</tr>
+			<tr>
+				<td><button class="btn" type="submit">SUBMIT</button></td>
+				<td>Remaining Value: {{sheet.remainder}}</td>
+			</tr>
+		</table>
+	</form>
+</div>
