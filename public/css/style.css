@@ -1,0 +1,56 @@
+.main {
+	
+}
+
+input.ng-invalid.ng-touched {
+	border: 1px red solid;
+}
+
+input.ng-valid-required.ng-touched {
+	border: 1px limegreen solid;
+}
+nav ul {
+	list-style: none;
+}
+
+nav ul li {
+	display: inline-block;
+	padding-right: 50px;
+}
+
+nav ul li:last-child {
+	padding-right: 0;
+}
+
+#focusedInput {
+	max-width: 250px;
+}
+
+.tableFormMargin {
+	margin-left: 50px; 
+}
+
+.contact-list {
+	list-style: none;
+}
+
+.tableForm-options {
+	margin-left: 20px;
+}
+
+.tableForm-ul {
+	list-style: none;
+}
+
+.tableForm-ul li {
+	display: inline-block;
+	padding-right: 25px;
+}
+
+.tableForm-ul li:last-child {
+	padding-right: 0;
+}
+
+.btn:hover {
+	background-color: #7D7D7D;
+}

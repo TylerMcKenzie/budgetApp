@@ -1,0 +1,1 @@
+var registrationControllers=angular.module("registrationControllers",[]);registrationControllers.controller("RegistrationController",["$scope","$http","$window",function(o,r,t){o.register=function(){r.post("/users",o.user),t.location.replace("/")}}]),registrationControllers.controller("LoginController",["$scope","$http",function(o,r){o.login=function(){}}]);

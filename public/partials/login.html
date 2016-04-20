@@ -1,0 +1,20 @@
+<section class="card login">
+	<form name="loginform" ng-submit="login()" novalidate>
+		<div class="introtext">
+			<h3>Login</h3>
+			<p ng-show="message">{{message}}</p>
+		</div>
+
+		<fieldset>
+			<input type="email" name="email" placeholder="Email" ng-model="user.email" ng-required="true">
+			<p class="error validationerror" ng-hide="loginform.email.$valid">Must be a valid email</p>
+			<p ng-show="loginform.email.$valid">&checkmark;</p>
+
+			<input type="password" name="password" placeholder="password" ng-model="user.password" ng-required="true">
+			<p class="error validationerror" ng-hide="loginform.password.$valid" >Password invalid</p>
+			<p ng-show="loginform.password.$valid">&checkmark;</p>
+		</fieldset>
+
+		<button type="submit" class="btn" ng-disabled="loginform.$invalid">Login</button>
+	</form>
+</section>

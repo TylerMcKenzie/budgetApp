@@ -1,0 +1,26 @@
+<section class="card register">
+	<form name="registrationform" ng-submit="register()" novalidate>
+		<div class="introtext">
+			<h3>Register</h3>
+			<p>{{message}}</p>
+		</div>
+
+		<fieldset>
+			<input type="email" name="email" placeholder="Email" ng-model="user.email" ng-required="true">
+			<p ng-hide="registrationform.email.$valid">Must be a valid email</p>
+			<p ng-show="registrationform.email.$valid">&checkmark;</p>
+
+			<p><input type="password" name="password" placeholder="password" ng-model="user.password" ng-required="true" ng-minlength="5"></p>
+			<p ng-hide="registrationform.password.$valid">Password must be minimum of 5 characters</p>
+			<p ng-show="registrationform.password.$valid">&checkmark;</p>
+
+			<p>Confirm Password:</p>
+			<input type="password" name="confirmpassword" placeholder="password" ng-model="confirmpass" ng-required="true">
+			<p ng-hide="user.password===confirmpass && user.password">Passwords do not match</p>
+			<p ng-show="user.password===confirmpass && user.password">&checkmark;</p>
+
+		</fieldset>
+	
+		<button type="submit" class="btn" ng-disabled="registrationform.$invalid || user.password!==confirmpass">Register</button>
+	</form>
+</section>
