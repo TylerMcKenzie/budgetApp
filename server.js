@@ -4,6 +4,7 @@ var mongojs = require('mongojs');
 var db = mongojs('myData', ['users']);
 var bodyParser = require('body-parser');
 var users = require('login-mongo');
+var port = Number(process.env.PORT || 3000);
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
@@ -38,4 +39,4 @@ app.post('/login', function(req, res) {
 	});
 });
 
-app.listen(3000);
+app.listen(port);
