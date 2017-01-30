@@ -3,7 +3,7 @@ This app was made a week after graduating DevBootcamp in April 2016. The app is 
 
 # Installation
 > To install simply clone this repo (assuming you have Node v4^)  
-> `git clone git@github.com:TylerMcKenzie/budgetApp.git`  
-> build dependencies - `npm install`  
-> run the server - `node server`  
-> go to [localhost:3000](http://localhost:3000)
+>- `git clone git@github.com:TylerMcKenzie/budgetApp.git`  
+>- build dependencies - `npm install`  
+>- run the server - `node server`  
+>- go to [localhost:3000](http://localhost:3000)
